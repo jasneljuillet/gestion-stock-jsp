@@ -1,0 +1,23 @@
+@charset "ISO-8859-1";
+@import url('https://fonts.googleapis.com/css2?family=Magra&display=swap');
+
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+.head {
+    width: 100%;
+    padding-top: -0.1rem;
+    padding-bottom: -0.1rem;
+    background-color: #1d1e22;
+    position: fixed;
+}
+
+.head p {
+    text-align: center;
+    color: #fff;
+    text-transform: capitalize;
+    font-size: xx-large;
+    font-family: Magra, Verdana, Geneva, Tahoma, sans-serif;
+}

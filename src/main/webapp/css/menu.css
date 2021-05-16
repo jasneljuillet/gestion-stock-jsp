@@ -1,0 +1,57 @@
+@charset "ISO-8859-1";
+@import url('https://fonts.googleapis.com/css2?family=Magra&display=swap');
+
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+
+    background-color: #e5e5f7;
+    opacity: 1;
+    background: radial-gradient(circle, transparent 20%, #e5e5f7 20%, #e5e5f7 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, #e5e5f7 20%, #e5e5f7 80%, transparent 80%, transparent) 25px 25px, linear-gradient(#444cf7 2px, transparent 2px) 0 -1px, linear-gradient(90deg, #444cf7 2px, #e5e5f7 2px) -1px 0;
+    background-size: 50px 50px, 50px 50px, 25px 25px, 25px 25px;
+}
+
+.menu {
+    font-family: Magra, Helvetica, sans-serif;
+    text-align: center;
+    width: 70%;
+    margin-top: 10%;
+    margin-left: 13%;
+    padding: 2rem 2rem;
+    border: 2px solid #1d1e22;
+    position: absolute;
+}
+
+#icon {
+    width: 20px;
+}
+
+.menu #box1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu #box2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.menu #box1 a, .menu #box2 a, .menu #box3 a {
+    width: 20%;
+    height: 40px !important;
+    color: #fff;
+    text-transform: capitalize;
+    background-color: #5a3205; 
+    padding: 2rem 2rem;  
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 5px;
+    margin-right: 5px;
+    font-size: 15px;
+}
