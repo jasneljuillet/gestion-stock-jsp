@@ -1,0 +1,14 @@
+
+#back a #icon  {
+	padding: 1rem 1rem;
+	margin-top: 0%;
+	width: 60px;
+	height: 30px;
+	background-color: #5a3205;
+	border-bottom-right-radius: 20px;
+	border-top-right-radius: 20px;
+	color: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}

@@ -1,4 +1,3 @@
-@charset "ISO-8859-1";
 @import url('https://fonts.googleapis.com/css2?family=Magra&display=swap');
 
 body, html {
@@ -7,6 +6,18 @@ body, html {
 }
 
 .footer {
+    margin-top: auto;
+    background-color: #1d1e22;
+}
+
+.footer p {
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    font-size: 20px;
+    font-family: Magra, Verdana, Geneva, Tahoma, sans-serif;
+}
+/* .footer {
     z-index: 100;
     position: absolute;
     width: 100%;
@@ -27,4 +38,4 @@ body, html {
     color: #fff;
     text-align: center;
     margin-top: 15px;
-}
+} */

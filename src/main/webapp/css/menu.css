@@ -1,17 +1,103 @@
-@charset "ISO-8859-1";
 @import url('https://fonts.googleapis.com/css2?family=Magra&display=swap');
-
-body, html {
-    margin: 0;
-    padding: 0;
+*{
+    box-sizing: border-box;
 }
 
 body {
-
     background-color: #e5e5f7;
     opacity: 1;
     background: radial-gradient(circle, transparent 20%, #e5e5f7 20%, #e5e5f7 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, #e5e5f7 20%, #e5e5f7 80%, transparent 80%, transparent) 25px 25px, linear-gradient(#444cf7 2px, transparent 2px) 0 -1px, linear-gradient(90deg, #444cf7 2px, #e5e5f7 2px) -1px 0;
     background-size: 50px 50px, 50px 50px, 25px 25px, 25px 25px;
+}
+
+.menu {
+    margin-top: 5%;
+    margin-left: 15%;
+    width: 70%;
+    padding: 2rem 2rem;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #1d1e22;
+    font-family: Magra, Helvetica, sans-serif;
+}
+
+#box1, #box2  {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#box3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu #box1 a, .menu #box2 a, .menu #box3 a {
+	height: 7rem;
+    width: 20%;
+    color: #fff;
+    text-transform: capitalize;
+    background-color: #5a3205; 
+    padding: 2rem 2rem;  
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    margin-top: 5px;
+    margin-right: 5px;
+    font-size: 15px;
+    transition: 1s;
+}
+
+.menu #box1 a:hover, .menu #box2 a:hover, .menu #box3 a:hover {
+    width: 22%;
+    color: #000;
+    transition: 1s;
+    font-size: 17px;
+}
+
+#icon {
+    width: 20px;
+}
+
+ @media (max-width: 768px) {
+    .menu {
+        margin-top: 5%;
+        margin-left: 0%;
+        width: 100%;
+        padding: 1rem 1rem;
+        display: flex;
+        flex-direction: column;
+        border: 1px solid #1d1e22;
+        font-family: Magra, Helvetica, sans-serif;
+    }
+
+    .menu #box1 a, .menu #box2 a, .menu #box3 a {
+        width: 20%;
+        color: #fff;
+        text-transform: capitalize;
+        background-color: #5a3205; 
+        padding: 2rem 2rem;  
+        border-radius: 5px;
+        text-align: center;
+        text-decoration: none;
+        margin-top: 5px;
+        margin-right: 5px;
+        font-size: 10px;
+        transition: 1s;
+    }
+
+    #box1, #box2  {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+} 
+/* 
+body, html {
+    margin: 0;
+    padding: 0;
 }
 
 .menu {
@@ -25,9 +111,7 @@ body {
     position: absolute;
 }
 
-#icon {
-    width: 20px;
-}
+
 
 .menu #box1 {
     display: flex;
@@ -44,7 +128,7 @@ body {
 
 .menu #box1 a, .menu #box2 a, .menu #box3 a {
     width: 20%;
-    height: 40px !important;
+    height: 6.5rem;
     color: #fff;
     text-transform: capitalize;
     background-color: #5a3205; 
@@ -54,4 +138,12 @@ body {
     margin-top: 5px;
     margin-right: 5px;
     font-size: 15px;
+    transition: 1s;
 }
+
+.menu #box1 a:hover, .menu #box2 a:hover, .menu #box3 a:hover {
+    width: 22%;
+    color: #000;
+    transition: 1s;
+    font-size: 17px;
+} */
