@@ -6,6 +6,32 @@ body, html {
     padding: 0;
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+.head {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #1d1e22;
+}
+
+.head p {
+    color: #fff;
+    text-transform: capitalize;
+    font-size: x-large;
+    font-family: Magra, Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+/* body, html {
+    margin: 0;
+    padding: 0;
+}
+
 .head {
     width: 100%;
     padding-top: -0.1rem;
@@ -20,4 +46,4 @@ body, html {
     text-transform: capitalize;
     font-size: xx-large;
     font-family: Magra, Verdana, Geneva, Tahoma, sans-serif;
-}
+} */
