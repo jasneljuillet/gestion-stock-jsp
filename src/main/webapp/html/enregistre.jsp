@@ -23,9 +23,6 @@
                 <label for="Qte"> Quantite</label>
                 <input type="tel" id="Qte"/> <br/>
 
-                <label for="Qte"> Quantite</label>
-                <input type="tel" id="Qte"/> <br/>
-
                 <label for="prix"> Prix</label>
                 <input type="tel" id="prix"/> <br/>
 
