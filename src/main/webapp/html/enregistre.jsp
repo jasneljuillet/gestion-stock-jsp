@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head>
 	<jsp:include page="../hf/header.jsp" />
-    <link rel="stylesheet" type="text/css" href="menu.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/enregistre.css"/>
 </head>
 
 <body>
@@ -15,46 +15,113 @@
   <!-- end -->
 
     <!-- formulaire -->
-    <center>
-        <form>
-                <label for="nom"> Nom du produit</label>
-                <input type="text" id="nom"/> <br/>
-
-                <label for="Qte"> Quantite</label>
-                <input type="tel" id="Qte"/> <br/>
-
-                <label for="prix"> Prix</label>
-                <input type="tel" id="prix"/> <br/>
-
-                <label for="date"> Date fabrication</label>
-                <input type="date" id="date"/> <br/>
-
-                <label for="expiration"> Date expiration</label>
-                <input type="date" id="expiration"/> <br/>
-
-                <label for="fournisseur"> Fournisseur</label>
-                <input type="text" id="forunisseur"/> <br/>
-
-                <label for="Telfournisseur"> Tel fournisseur</label>
-                <input type="tel" id="Telfournisseur"/> <br/>
-
-                <label for="email"> Email fournisseur</label>
-                <input type="email" id="email"/> <br/>
-
-                <label for="Adresse"> Adresse fournisseur</label>
-                <input type="text" id="Adresse"/> <br/>
-
-                <label> Etat</label>
-                <select>
-                    <option></option>
-                    <option>Bloque</option>
-                    <option>Vente</option>
-                </select>
-
-                <input type="submit" value="Enregistrer"/> 
-
-        </form>
-    </center>
+     <div class="container">
+  <form action="action_page.php">
+    <div class="row">
+      <div class="col-25">
+         <label for="nom"><b>Nom produit</b></label>
+      </div>
+      <div class="col-75">
+        <input type="text" placeholder="Entrer le nom" name="nom"  required>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="Qte"><b>Quantite</b></label>
+      </div>
+      <div class="col-75">
+       <input type="tel" placeholder="Entrer la quantite" name="Qte" required>
+      </div>
+    </div>
+     <div class="row">
+      <div class="col-25">
+         <label for="prix"><b>Prix du produit</b></label>
+      </div>
+      <div class="col-75">
+        <input type="text" placeholder="Entrer le prix" name="prix"  required>
+      </div>
+    </div>
+       <div class="row">
+      <div class="col-25">
+         <label for="etat"><b>Status</b></label>
+      </div>
+      <div class="col-75">
+        <select id="country" name="country">
+        <option></option>
+          <option value="Vente">Vente</option>
+           <option value="Bloque">Bloque</option>
+        </select>
+      </div>
+      </div>
+    <div class="row">
+      <div class="col-25">
+         <label for="etat"><b>Etat du produit</b></label>
+      </div>
+      <div class="col-75">
+        <select id="country" name="country">
+        <option></option>
+          <option value="Disponible">Disponible</option>
+           <option value="Nom Disponible">Nom Disponible</option>
+        </select>
+      </div>
+      </div>
+     <div class="row">
+      <div class="col-25">
+         <label for="date"><b>Date de fabrication</b></label>
+      </div>
+      <div class="col-75">
+        <input type="date" placeholder="Entrer la date de fabrication" name="date" required>
+      </div>
+    </div>
+       <div class="row">
+      <div class="col-25">
+         <label for="date"><b>Date d'expiration</b></label>
+      </div>
+      <div class="col-75">
+        <input type="date" placeholder="Entrer la date d'expiration" name="date"  required>
+      </div>
+    </div>
+      <div class="row">
+      <div class="col-25">
+         <label for="Fournisseur"><b>Nom du Fournisseur</b></label>
+      </div>
+      <div class="col-75">
+        <input type="text" placeholder="Nom du fournisseur" name="fournisseur"  required>
+      </div>
+    </div>
+      <div class="row">
+      <div class="col-25">
+         <label for="telephone"><b>Numero du fournisseur</b></label>
+      </div>
+      <div class="col-75">
+        <input type="tel" placeholder="Telephone du fournisseur" name="telephone"  required>
+      </div>
+    </div>
+      <div class="row">
+      <div class="col-25">
+         <label for="email"><b>Email du fournisseur</b></label>
+      </div>
+      <div class="col-75">
+        <input type="email" placeholder="Email du fournisseur" name="email"  required>
+      </div>
+    </div>
+     <div class="row">
+      <div class="col-25">
+         <label for="adresse"><b>Adresse du fournisseur</b></label>
+      </div>
+      <div class="col-75">
+        <input type="text" placeholder="adresse du fournisseur" name="text"  required>
+      </div>
+    </div>
+    
+    </div>
+   
+    <div class="row">
+      <input type="submit" value="Enregistré">
+    </div>
+  </form>
+</div> 
+  	 <!-- end -->
     
     <!-- back -->
         <jsp:include page="../hf/back.jsp" />
