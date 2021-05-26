@@ -15,8 +15,13 @@
   <!-- end -->
 
     <!-- formulaire -->
+    <div class="center">
+	     <h1>Enregistrer un produit</h1>
+	      <p>Remplissez tous les champs!</p>
+     </div>
+     
      <div class="container">
-  <form action="action_page.php">
+  <form action=" <%= request.getContextPath() %>/enregistre" method="post">
     <div class="row">
       <div class="col-25">
          <label for="nom"><b>Nom produit</b></label>
@@ -30,7 +35,7 @@
         <label for="Qte"><b>Quantite</b></label>
       </div>
       <div class="col-75">
-       <input type="tel" placeholder="Entrer la quantite" name="Qte" required>
+       <input type="tel" placeholder="Entrer la quantite" name="gte" required>
       </div>
     </div>
      <div class="row">
@@ -46,7 +51,7 @@
          <label for="etat"><b>Status</b></label>
       </div>
       <div class="col-75">
-        <select id="country" name="country">
+        <select id="country" name="status">
         <option></option>
           <option value="Vente">Vente</option>
            <option value="Bloque">Bloque</option>
@@ -58,7 +63,7 @@
          <label for="etat"><b>Etat du produit</b></label>
       </div>
       <div class="col-75">
-        <select id="country" name="country">
+        <select id="country" name="etat">
         <option></option>
           <option value="Disponible">Disponible</option>
            <option value="Nom Disponible">Nom Disponible</option>
@@ -78,7 +83,7 @@
          <label for="date"><b>Date d'expiration</b></label>
       </div>
       <div class="col-75">
-        <input type="date" placeholder="Entrer la date d'expiration" name="date"  required>
+        <input type="date" placeholder="Entrer la date d'expiration" name="datex"  required>
       </div>
     </div>
       <div class="row">
@@ -110,10 +115,8 @@
          <label for="adresse"><b>Adresse du fournisseur</b></label>
       </div>
       <div class="col-75">
-        <input type="text" placeholder="adresse du fournisseur" name="text"  required>
+        <input type="text" placeholder="adresse du fournisseur" name="adress"  required>
       </div>
-    </div>
-    
     </div>
    
     <div class="row">
