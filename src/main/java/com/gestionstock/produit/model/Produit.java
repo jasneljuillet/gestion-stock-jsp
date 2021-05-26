@@ -3,8 +3,8 @@ package com.gestionstock.produit.model;
 public class Produit {
 	
 	private String numero;
-	private int quantite;
-	private int prix;
+	private String quantite;
+	private String prix;
 	private String status;
 	private String etat;
 	private String datefabrication;
@@ -12,24 +12,23 @@ public class Produit {
 	private String nomfournisseur;
 	private String adressefournisseur;
 	private String emailfournisseur;
-	private int numerofournisseur;
-	
+	private String numerofournisseur;
 	public String getNumero() {
 		return numero;
 	}
 	public void setNumero(String numero) {
 		this.numero = numero;
 	}
-	public int getQuantite() {
+	public String getQuantite() {
 		return quantite;
 	}
-	public void setQuantite(int quantite) {
+	public void setQuantite(String quantite) {
 		this.quantite = quantite;
 	}
-	public int getPrix() {
+	public String getPrix() {
 		return prix;
 	}
-	public void setPrix(int prix) {
+	public void setPrix(String prix) {
 		this.prix = prix;
 	}
 	public String getStatus() {
@@ -74,11 +73,12 @@ public class Produit {
 	public void setEmailfournisseur(String emailfournisseur) {
 		this.emailfournisseur = emailfournisseur;
 	}
-	public int getNumerofournisseur() {
+	public String getNumerofournisseur() {
 		return numerofournisseur;
 	}
-	public void setNumerofournisseur(int numerofournisseur) {
+	public void setNumerofournisseur(String numerofournisseur) {
 		this.numerofournisseur = numerofournisseur;
 	}
+	
 	
 }
