@@ -13,7 +13,7 @@ import com.gestionstock.produit.model.Produit;
 /**
  * Servlet implementation class Gestionstock
  */
-@WebServlet("/Gestionstock")
+@WebServlet("/enregistrer")
 public class Gestionstock extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -45,25 +45,26 @@ public class Gestionstock extends HttpServlet {
 		
 		Produit produit = new Produit();
 		
-		produit.setNumero(request.getParameter("nom"));
+		produit.setNomproduit(request.getParameter("nom"));
 		produit.setQuantite(request.getParameter("qte"));
 		produit.setPrix(request.getParameter("prix"));
 		produit.setStatus(request.getParameter("status"));
 		produit.setEtat(request.getParameter("etat"));
 		produit.setDatefabrication(request.getParameter("date"));
 		produit.setDateexpiration(request.getParameter("datex"));
-		produit.setNomfournisseur(request.getParameter("setNomfournisseur"));
+		produit.setNomfournisseur(request.getParameter("fournisseur"));
 		produit.setAdressefournisseur(request.getParameter("adress"));
 		produit.setEmailfournisseur(request.getParameter("email"));
 		produit.setNumerofournisseur(request.getParameter("telephone"));
-		System.out.println("Work");
+			
 		try {
 			produitdao.enregistre(produit);
+			request.getSession().setAttribute("message", "👍 Produit Enregistré Avec Succès");
+			response.sendRedirect("/projet-jsp/html/enregistre.jsp");
 		} catch(ClassNotFoundException e) {
 			e.printStackTrace();
 		}
 		
-		this.getServletContext().getRequestDispatcher("./html/enregistre.jsp").forward(request, response);
 	}
 
 }

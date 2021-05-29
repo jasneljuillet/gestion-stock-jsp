@@ -11,30 +11,30 @@ public class ProduitDao {
 
 	public int enregistre(Produit produit) throws ClassNotFoundException {
 		
-		String insert = "INSERT INTO produits" + " ( id, nomproduit, quantite, prix, datefabrication, datexpiration, "
+		String insert = "INSERT INTO produits" + " ( nomproduit, quantite, prix, datefabrication, datexpiration, "
 				+ "fournisseur, telfournisseur, emailfournisseur, adressefournisseur, etat, status ) VALUES " + 
-				" (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);" ;
+				" (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);" ;
 		
 		int result = 0;
 		Class.forName("com.mysql.jdbc.Driver");
 		
-		try( Connection connection = DriverManager.getConnection("jdbc:mysql://localhost/3306/mysql_database?useSSL=false", "root", "");
+		try( Connection connection = DriverManager.getConnection("jdbc:mysql://localhost/gestionstock", "root", "");
 				PreparedStatement preparedStatement = connection.prepareStatement(insert)) {
 			
-			preparedStatement.setInt(1, 1);
-			preparedStatement.setString(2, produit.getNumero());
-			preparedStatement.setString(3, produit.getQuantite());
-			preparedStatement.setString(4, produit.getPrix());
-			preparedStatement.setString(5, produit.getStatus());
-			preparedStatement.setString(6, produit.getEtat());
-			preparedStatement.setString(7, produit.getDatefabrication());
-			preparedStatement.setString(8, produit.getDateexpiration());
-			preparedStatement.setString(9, produit.getNomfournisseur());
-			preparedStatement.setString(10, produit.getAdressefournisseur());
-			preparedStatement.setString(11, produit.getEmailfournisseur());
-			preparedStatement.setString(12, produit.getNumerofournisseur());
+//			preparedStatement.setInt(1, 1);
+			preparedStatement.setString(1, produit.getNomproduit());
+			preparedStatement.setString(2, produit.getQuantite());
+			preparedStatement.setString(3, produit.getPrix());
+			preparedStatement.setString(4, produit.getDatefabrication());
+			preparedStatement.setString(5, produit.getDateexpiration());
+			preparedStatement.setString(6, produit.getNomfournisseur());
+			preparedStatement.setString(7, produit.getNumerofournisseur());
+			preparedStatement.setString(8, produit.getEmailfournisseur());
+			preparedStatement.setString(9, produit.getAdressefournisseur());
+			preparedStatement.setString(10, produit.getEtat());
+			preparedStatement.setString(11, produit.getStatus());
 			
-			System.out.println(preparedStatement);
+//			System.out.println(preparedStatement);
 			
 			result = preparedStatement.executeUpdate();
 					
