@@ -2,7 +2,7 @@ package com.gestionstock.produit.model;
 
 public class Produit {
 	
-	private String numero;
+	private String nomproduit;
 	private String quantite;
 	private String prix;
 	private String status;
@@ -13,12 +13,14 @@ public class Produit {
 	private String adressefournisseur;
 	private String emailfournisseur;
 	private String numerofournisseur;
-	public String getNumero() {
-		return numero;
+
+	public String getNomproduit() {
+		return nomproduit;
 	}
-	public void setNumero(String numero) {
-		this.numero = numero;
+	public void setNomproduit(String nomproduit) {
+		this.nomproduit = nomproduit;
 	}
+	
 	public String getQuantite() {
 		return quantite;
 	}
