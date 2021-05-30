@@ -18,7 +18,7 @@ public class ProduitDao {
 		int result = 0;
 		Class.forName("com.mysql.jdbc.Driver");
 		
-		try( Connection connection = DriverManager.getConnection("jdbc:mysql://localhost/gestionstock", "root", "");
+		try( Connection connection = DriverManager.getConnection("jdbc:mysql://127.0.0.1/gestionstock", "root", "");
 				PreparedStatement preparedStatement = connection.prepareStatement(insert)) {
 			
 //			preparedStatement.setInt(1, 1);
