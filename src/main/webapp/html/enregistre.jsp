@@ -81,7 +81,7 @@
         <select id="country" name="etat">
         <option></option>
           <option value="Disponible">Disponible</option>
-           <option value="Nom Disponible">Nom Disponible</option>
+           <option value="Non Disponible">Nom Disponible</option>
         </select>
       </div>
       </div>
