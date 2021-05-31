@@ -142,8 +142,7 @@
   	 <!-- end -->
     
     <!-- back -->
-        <jsp:include page="../hf/back.jsp" />
-    <!-- end -->
+   
     
      <!-- footer -->
      		<jsp:include page="../hf/footer.jsp" />

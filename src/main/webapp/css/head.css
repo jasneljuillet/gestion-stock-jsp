@@ -15,7 +15,6 @@ body {
 .head {
     width: 100%;
     display: flex;
-    justify-content: center;
     background-color: #1d1e22;
 }
 
@@ -25,25 +24,3 @@ body {
     font-size: x-large;
     font-family: Magra, Verdana, Geneva, Tahoma, sans-serif;
 }
-
-
-/* body, html {
-    margin: 0;
-    padding: 0;
-}
-
-.head {
-    width: 100%;
-    padding-top: -0.1rem;
-    padding-bottom: -0.1rem;
-    background-color: #1d1e22;
-    position: fixed;
-}
-
-.head p {
-    text-align: center;
-    color: #fff;
-    text-transform: capitalize;
-    font-size: xx-large;
-    font-family: Magra, Verdana, Geneva, Tahoma, sans-serif;
-} */
