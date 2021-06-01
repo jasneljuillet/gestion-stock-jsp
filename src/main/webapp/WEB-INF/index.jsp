@@ -9,7 +9,7 @@
 
     <body>
        <!-- head -->
-     	<jsp:include page="../hf/head.jsp" />
+     	<jsp:include page="../hf/head2.jsp" />
        <!-- end -->
 
        <!-- menu -->

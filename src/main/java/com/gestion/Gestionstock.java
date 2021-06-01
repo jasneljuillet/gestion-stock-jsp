@@ -44,11 +44,9 @@ public class Gestionstock extends HttpServlet {
 //		doGet(request, response);
 		
 		Produit produit = new Produit();
-		
 		produit.setNomproduit(request.getParameter("nom"));
 		produit.setQuantite(request.getParameter("qte"));
 		produit.setPrix(request.getParameter("prix"));
-		produit.setStatus(request.getParameter("status"));
 		produit.setEtat(request.getParameter("etat"));
 		produit.setDatefabrication(request.getParameter("date"));
 		produit.setDateexpiration(request.getParameter("datex"));

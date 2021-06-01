@@ -67,7 +67,6 @@
 <td>Email Fournisseur</td>
 <td>Adresse Fournisseur</td>
 <td>Etat</td>
-<td>Status</td>
 <td>Action</td>
 </tr>
 	<%
@@ -93,7 +92,6 @@
 				<td><%=result.getString("emailfournisseur") %></td>
 				<td><%=result.getString("adressefournisseur") %></td>
 				<td><%=result.getString("etat") %></td>
-				<td><%=result.getString("status") %></td>
 				<td><a href="update.jsp?id=<%=result.getString("id") %>">Modifier</a></td>
 				
 				</tr>

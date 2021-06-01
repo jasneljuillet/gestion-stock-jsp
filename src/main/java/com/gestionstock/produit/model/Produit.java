@@ -5,7 +5,6 @@ public class Produit {
 	private String nomproduit;
 	private String quantite;
 	private String prix;
-	private String status;
 	private String etat;
 	private String datefabrication;
 	private String dateexpiration;
@@ -32,12 +31,6 @@ public class Produit {
 	}
 	public void setPrix(String prix) {
 		this.prix = prix;
-	}
-	public String getStatus() {
-		return status;
-	}
-	public void setStatus(String status) {
-		this.status = status;
 	}
 	public String getEtat() {
 		return etat;

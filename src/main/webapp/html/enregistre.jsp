@@ -63,17 +63,17 @@
     </div>
        <div class="row">
       <div class="col-25">
-         <label for="etat"><b>Status</b></label>
+         <label for="etat"><b>Etat</b></label>
       </div>
       <div class="col-75">
-        <select id="country" name="status">
+        <select id="country" name="etat">
         <option></option>
           <option value="Vente">Vente</option>
            <option value="Bloque">Bloque</option>
         </select>
       </div>
       </div>
-    <div class="row">
+   <!--  <div class="row">
       <div class="col-25">
          <label for="etat"><b>Etat du produit</b></label>
       </div>
@@ -85,6 +85,7 @@
         </select>
       </div>
       </div>
+       -->
      <div class="row">
       <div class="col-25">
          <label for="date"><b>Date de fabrication</b></label>

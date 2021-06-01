@@ -66,7 +66,6 @@
 <td>Tel Fournisseur</td>
 <td>Email Fournisseur</td>
 <td>Adresse Fournisseur</td>
-<td>Status</td>
 </tr>
 	<%
 	
@@ -74,7 +73,7 @@
 			
 			Connection connection = DriverManager.getConnection("jdbc:mysql://127.0.0.1/gestionstock", "root", "");
 			Statement statement = connection.createStatement();
-			ResultSet result = statement.executeQuery("SELECT * from produits WHERE etat='Disponible' ");
+			ResultSet result = statement.executeQuery("SELECT * FROM produits WHERE quantite > 0 AND etat = 'Vente' ");
 			
 			while( result.next() ) {
 				
@@ -90,7 +89,6 @@
 				<td><%=result.getString("telfournisseur") %></td>
 				<td><%=result.getString("emailfournisseur") %></td>
 				<td><%=result.getString("adressefournisseur") %></td>
-				<td><%=result.getString("status") %></td>
 				
 				</tr>
 				<%
