@@ -17,6 +17,7 @@
 <head>
 	<jsp:include page="../hf/header.jsp" />
     <link rel="stylesheet" type="text/css" href="menu.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/enregistre.css"/>
     
     <style>
     
@@ -107,7 +108,160 @@
 	%>
 </table>
   <!-- end -->
+  <%
+  	String id = request.getParameter("id");
   
+  if( id != null) {
+	  
+	  try {
+		  
+		  Connection connection = DriverManager.getConnection("jdbc:mysql://127.0.0.1/gestionstock", "root", "");
+		  String query = "SELECT * FROM produits WHERE id = "+id;
+		  Statement statement = connection.createStatement();
+		  ResultSet result = statement.executeQuery(query);
+		  
+		  while( result.next()) {
+			  %>
+			  
+			       <div class="container">
+  <form action="" method="post">
+    <div class="row">
+      <div class="col-25">
+         <label for="nom"><b>Nom produit</b></label>
+      </div>
+      <div class="col-75">
+        <input type="text" value="<%=result.getString("nomproduit") %>" name="nom"  required>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="Qte"><b>Quantite</b></label>
+      </div>
+      <div class="col-75">
+       <input type="tel" value="<%=result.getString("quantite") %>" name="qte" required>
+      </div>
+    </div>
+     <div class="row">
+      <div class="col-25">
+         <label for="prix"><b>Prix du produit</b></label>
+      </div>
+      <div class="col-75">
+        <input type="text" value="<%=result.getString("prix") %>" name="prix"  required>
+      </div>
+    </div>
+       <div class="row">
+      <div class="col-25">
+         <label for="etat"><b>Etat</b></label>
+      </div>
+      <div class="col-75">
+      <%
+      	if(result.getString("etat").equals("Vente") ) {
+      		%>
+      		
+      		<select id="country" name="etat">
+	        	<option></option>
+	            <option value="Vente" selected>Vente</option>
+	           <option value="Bloque">Bloque</option>
+	        </select>
+      		
+      		<%
+      	} else {
+      		
+		%>
+      		
+      		<select id="country" name="etat">
+	        	<option></option>
+	            <option value="Vente">Vente</option>
+	           <option value="Bloque" selected>Bloque</option>
+	        </select>
+      		
+      		<%
+      	}
+      %>
+        
+      </div>
+      </div>
+   <!--  <div class="row">
+      <div class="col-25">
+         <label for="etat"><b>Etat du produit</b></label>
+      </div>
+      <div class="col-75">
+        <select id="country" name="etat">
+        <option></option>
+          <option value="Disponible">Disponible</option>
+           <option value="Non Disponible">Nom Disponible</option>
+        </select>
+      </div>
+      </div>
+       -->
+     <div class="row">
+      <div class="col-25">
+         <label for="date"><b>Date de fabrication</b></label>
+      </div>
+      <div class="col-75">
+        <input type="date" value="<%=result.getString("datefabrication") %>" name="date" required>
+      </div>
+    </div>
+       <div class="row">
+      <div class="col-25">
+         <label for="date"><b>Date d'expiration</b></label>
+      </div>
+      <div class="col-75">
+        <input type="date" value="<%=result.getString("datexpiration") %>" name="datex"  required>
+      </div>
+    </div>
+      <div class="row">
+      <div class="col-25">
+         <label for="Fournisseur"><b>Nom du Fournisseur</b></label>
+      </div>
+      <div class="col-75">
+        <input type="text"  value="<%=result.getString("fournisseur") %>" name="fournisseur"  required>
+      </div>
+    </div>
+      <div class="row">
+      <div class="col-25">
+         <label for="telephone"><b>Numero du fournisseur</b></label>
+      </div>
+      <div class="col-75">
+        <input type="tel"value="<%=result.getString("telfournisseur") %>" name="telephone"  required>
+      </div>
+    </div>
+      <div class="row">
+      <div class="col-25">
+         <label for="email"><b>Email du fournisseur</b></label>
+      </div>
+      <div class="col-75">
+        <input type="email" value="<%=result.getString("emailfournisseur") %>" name="email"  required>
+      </div>
+    </div>
+     <div class="row">
+      <div class="col-25">
+         <label for="adresse"><b>Adresse du fournisseur</b></label>
+      </div>
+      <div class="col-75">
+        <input type="text" value="<%=result.getString("adressefournisseur") %>" name="adress"  required>
+      </div>
+    </div>
+   
+    <div class="row">
+      <input type="submit" value="Modifier">
+    </div>
+  </form>
+</div> 
+			  
+			  <%
+		  }
+		  
+	  } catch( Exception e) {
+		  e.printStackTrace();
+	  }
+	  
+		
+	  
+		
+  }
+  
+  %>
   <!-- footer -->
      		<jsp:include page="../hf/footer.jsp" />
    <!-- end -->
