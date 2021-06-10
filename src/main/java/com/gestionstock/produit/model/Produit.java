@@ -1,7 +1,7 @@
 package com.gestionstock.produit.model;
 
 public class Produit {
-	
+	private String id;
 	private String nomproduit;
 	private String quantite;
 	private String prix;
@@ -13,6 +13,14 @@ public class Produit {
 	private String emailfournisseur;
 	private String numerofournisseur;
 
+	public String getId() {
+		return id;
+	}
+	public void setId(String id) {
+		this.id = id;
+	}
+	
+	
 	public String getNomproduit() {
 		return nomproduit;
 	}

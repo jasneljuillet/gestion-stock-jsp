@@ -42,26 +42,59 @@ public class Gestionstock extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 //		doGet(request, response);
+		String action = request.getParameter("snd");
 		
-		Produit produit = new Produit();
-		produit.setNomproduit(request.getParameter("nom"));
-		produit.setQuantite(request.getParameter("qte"));
-		produit.setPrix(request.getParameter("prix"));
-		produit.setEtat(request.getParameter("etat"));
-		produit.setDatefabrication(request.getParameter("date"));
-		produit.setDateexpiration(request.getParameter("datex"));
-		produit.setNomfournisseur(request.getParameter("fournisseur"));
-		produit.setAdressefournisseur(request.getParameter("adress"));
-		produit.setEmailfournisseur(request.getParameter("email"));
-		produit.setNumerofournisseur(request.getParameter("telephone"));
+		
+		if(action.equals("Modifier")) {
 			
-		try {
-			produitdao.enregistre(produit);
-			request.getSession().setAttribute("message", "👍 Produit Enregistré Avec Succès");
-			response.sendRedirect("/projet-jsp/html/enregistre.jsp");
-		} catch(ClassNotFoundException e) {
-			e.printStackTrace();
+			Produit produit = new Produit();
+			produit.setId(request.getParameter("id"));
+			produit.setNomproduit(request.getParameter("nom"));
+			produit.setQuantite(request.getParameter("qte"));
+			produit.setPrix(request.getParameter("prix"));
+			produit.setEtat(request.getParameter("etat"));
+			produit.setDatefabrication(request.getParameter("date"));
+			produit.setDateexpiration(request.getParameter("datex"));
+			produit.setNomfournisseur(request.getParameter("fournisseur"));
+			produit.setAdressefournisseur(request.getParameter("adress"));
+			produit.setEmailfournisseur(request.getParameter("email"));
+			produit.setNumerofournisseur(request.getParameter("telephone"));
+			
+			
+			try {
+				
+				produitdao.modifier(produit);
+				response.sendRedirect("/projet-jsp/html/update.jsp");
+				
+			}catch(Exception e) {
+				e.printStackTrace();
+			}
 		}
+		
+		
+		if(action.equals("Enregistré")) {
+			Produit produit = new Produit();
+			produit.setNomproduit(request.getParameter("nom"));
+			produit.setQuantite(request.getParameter("qte"));
+			produit.setPrix(request.getParameter("prix"));
+			produit.setEtat(request.getParameter("etat"));
+			produit.setDatefabrication(request.getParameter("date"));
+			produit.setDateexpiration(request.getParameter("datex"));
+			produit.setNomfournisseur(request.getParameter("fournisseur"));
+			produit.setAdressefournisseur(request.getParameter("adress"));
+			produit.setEmailfournisseur(request.getParameter("email"));
+			produit.setNumerofournisseur(request.getParameter("telephone"));
+				
+			try {
+				produitdao.enregistre(produit);
+				request.getSession().setAttribute("message", "👍 Produit Enregistré Avec Succès");
+				response.sendRedirect("/projet-jsp/html/enregistre.jsp");
+			} catch(ClassNotFoundException e) {
+				e.printStackTrace();
+			}
+			
+		}
+	
 		
 	}
 

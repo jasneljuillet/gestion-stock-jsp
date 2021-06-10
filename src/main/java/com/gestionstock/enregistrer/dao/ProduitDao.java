@@ -42,4 +42,39 @@ public class ProduitDao {
 		return result;
 		
 	}
+	
+	public int modifier(Produit produit) throws ClassNotFoundException {
+		
+	
+		String update = "UPDATE produits SET nomproduit = ?, quantite = ?, prix = ?, datefabrication = ?, datexpiration = ?, fournisseur = ?, telfournisseur = ?, emailfournisseur = ?, adressefournisseur = ?, etat = ? WHERE id = ? ";
+		
+		int result = 0;
+		Class.forName("com.mysql.jdbc.Driver");
+		
+		try( Connection connection = DriverManager.getConnection("jdbc:mysql://127.0.0.1/gestionstock", "root", "");
+				PreparedStatement preparedStatement = connection.prepareStatement(update)) {
+			
+			preparedStatement.setString(1, produit.getNomproduit());
+			preparedStatement.setString(2, produit.getQuantite());
+			preparedStatement.setString(3, produit.getPrix());
+			preparedStatement.setString(4, produit.getDatefabrication());
+			preparedStatement.setString(5, produit.getDateexpiration());
+			preparedStatement.setString(6, produit.getNomfournisseur());
+			preparedStatement.setString(7, produit.getNumerofournisseur());
+			preparedStatement.setString(8, produit.getEmailfournisseur());
+			preparedStatement.setString(9, produit.getAdressefournisseur());
+			preparedStatement.setString(10, produit.getEtat());
+			preparedStatement.setString(11, produit.getId());
+			
+			
+		//System.out.println(preparedStatement);
+			
+			result = preparedStatement.executeUpdate();
+					
+				} catch(SQLException e) {
+					e.printStackTrace();
+				}
+		return result;
+		
+	}
 }

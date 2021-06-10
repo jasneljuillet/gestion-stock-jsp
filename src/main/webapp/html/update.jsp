@@ -124,7 +124,7 @@
 			  %>
 			  
 			       <div class="container">
-  <form action="" method="post">
+  <form action=" <%= request.getContextPath() %>/enregistrer" method="post">
     <div class="row">
       <div class="col-25">
          <label for="nom"><b>Nom produit</b></label>
@@ -242,26 +242,23 @@
         <input type="text" value="<%=result.getString("adressefournisseur") %>" name="adress"  required>
       </div>
     </div>
-   
+   <input style="display: none;" type="text" value="<%=request.getParameter("id") %>" name="id"  required>
     <div class="row">
-      <input type="submit" value="Modifier">
+      <input type="submit" name="snd" value="Modifier">
     </div>
   </form>
-</div> 
-			  
+</div> 	  
 			  <%
 		  }
 		  
 	  } catch( Exception e) {
 		  e.printStackTrace();
 	  }
-	  
-		
-	  
-		
+	  	
   }
   
   %>
+  
   <!-- footer -->
      		<jsp:include page="../hf/footer.jsp" />
    <!-- end -->
