@@ -42,7 +42,7 @@
 		
 		Connection connection = DriverManager.getConnection("jdbc:mysql://127.0.0.1/gestionstock", "root", "");
 		Statement statement = connection.createStatement();
-		ResultSet result = statement.executeQuery("SELECT * FROM produits WHERE id = 6 ");
+		ResultSet result = statement.executeQuery("SELECT * FROM produits WHERE id =  "+id);
 		//result.setString(1, id);
 		
 		while( result.next() ) {
@@ -81,9 +81,20 @@
       </div>
       <div class="col-75">
         <select id="country" name="etat">
-        <option></option>
-          <option value="Vente">Vente</option>
-           <option value="Bloque">Bloque</option>
+          <% 
+          	String etat = result.getString("etat");
+        		 if(etat.equals("Bloque")) {
+        			 %>
+        			 <option value="Bloque" selected>Bloque</option>
+        			 <option value="Vente">Vente</option>
+        			<%
+        		 } else {
+        			 %>
+        			  <option value="Vente" selected>Vente</option>
+        			  <option value="Bloque">Bloque</option>
+        			  <%
+        		 }
+          %>
         </select>
       </div>
       </div>
@@ -135,7 +146,7 @@
         <input type="text" placeholder="adresse du fournisseur" name="adress" value="<%=result.getString("adressefournisseur") %>" required>
       </div>
     </div>
-   
+    <input style="display: none;" type="text" placeholder="adresse du fournisseur" name="id" value="<%=id %>" required>
     <div class="row">
       <input type="submit" value="Modifier" name="snd">
     </div>
