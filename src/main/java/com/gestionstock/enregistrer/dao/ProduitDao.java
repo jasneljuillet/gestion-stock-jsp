@@ -32,7 +32,7 @@ public class ProduitDao {
 			preparedStatement.setString(9, produit.getAdressefournisseur());
 			preparedStatement.setString(10, produit.getEtat());
 			
-		//System.out.println(preparedStatement);
+		System.out.println(preparedStatement);
 			
 			result = preparedStatement.executeUpdate();
 					

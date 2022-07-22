@@ -136,7 +136,7 @@
     </div>
    
     <div class="row">
-      <input type="submit" value="Enregistré">
+      <input type="submit" value="Save" name="snd">
     </div>
   </form>
 </div> 

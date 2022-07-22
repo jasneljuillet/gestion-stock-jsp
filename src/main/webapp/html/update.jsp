@@ -92,7 +92,7 @@
 				<td><%=result.getString("emailfournisseur") %></td>
 				<td><%=result.getString("adressefournisseur") %></td>
 				<td><%=result.getString("etat") %></td>
-				<td><a href="update.jsp?id=<%=result.getString("id") %>">Modifier</a></td>
+				<td><a href="edit.jsp?id=<%=result.getString("id") %>">Modifier</a></td>
 				
 				</tr>
 				<%

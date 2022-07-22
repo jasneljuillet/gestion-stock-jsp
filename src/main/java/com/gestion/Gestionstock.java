@@ -44,6 +44,7 @@ public class Gestionstock extends HttpServlet {
 //		doGet(request, response);
 		String action = request.getParameter("snd");
 		
+		//System.out.println(action);
 		
 		if(action.equals("Modifier")) {
 			
@@ -71,8 +72,9 @@ public class Gestionstock extends HttpServlet {
 			}
 		}
 		
-		
-		if(action.equals("Enregistré")) {
+		//System.out.println(action);
+		if(action.equals("Save")) {
+//			System.out.println("LGTM");
 			Produit produit = new Produit();
 			produit.setNomproduit(request.getParameter("nom"));
 			produit.setQuantite(request.getParameter("qte"));
